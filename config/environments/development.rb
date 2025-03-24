@@ -75,6 +75,9 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
 
   #https://guides.rubrubyonrails.org/assets_pipline.html
-  # config.assets.prefix = "/dev-assets"
+  # config.assets.prefix = "/dev-assets"]
+
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
 end
