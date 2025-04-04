@@ -1,5 +1,5 @@
 
-<header class="bg-white shadow" data-controller="header">
+<header class="bg-white border-gray-200 border-b-1" data-controller="header">
   <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:divide-y lg:divide-gray-200 lg:px-8">
     <div class="relative flex h-20 justify-between">
       <div class="relative z-10 flex px-2 lg:px-0">
@@ -86,7 +86,7 @@
              <% else %>
                <%= link_to "Log in", new_user_session_path, class:'block px-4 py-2 text-sm text-gray-700', role:"menuitem", tabindex:"-1" %>
                <%= link_to "Sign up", new_user_registration_path, class:'block px-4 py-2 text-sm text-gray-700', role:"menuitem", tabindex:"-1" %>
-             <% end %>
+            <% end %>
           </div>
         </div>
       </div>
