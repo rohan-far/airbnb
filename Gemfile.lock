@@ -103,10 +103,21 @@ GEM
     erubi (1.13.1)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
+    ffi (1.17.1-aarch64-linux-gnu)
+    ffi (1.17.1-aarch64-linux-musl)
+    ffi (1.17.1-arm-linux-gnu)
+    ffi (1.17.1-arm-linux-musl)
+    ffi (1.17.1-arm64-darwin)
+    ffi (1.17.1-x86_64-darwin)
+    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.1-x86_64-linux-musl)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    image_processing (1.14.0)
+      mini_magick (>= 4.9.5, < 6)
+      ruby-vips (>= 2.0.17, < 3)
     importmap-rails (2.1.0)
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
@@ -129,6 +140,9 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    mini_magick (5.2.0)
+      benchmark
+      logger
     mini_mime (1.1.5)
     minitest (5.25.5)
     monetize (1.13.0)
@@ -224,6 +238,9 @@ GEM
     responders (3.1.1)
       actionpack (>= 5.2)
       railties (>= 5.2)
+    ruby-vips (2.2.3)
+      ffi (~> 1.12)
+      logger
     securerandom (0.4.1)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -282,6 +299,7 @@ DEPENDENCIES
   debug
   devise (~> 4.9, >= 4.9.3)
   faker
+  image_processing (~> 1.2)
   importmap-rails
   jbuilder
   money-rails (~> 1.12)
