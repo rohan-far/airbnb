@@ -42,7 +42,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -62,3 +62,7 @@ end
 gem 'devise', '~> 4.9', '>= 4.9.3'
 
 gem "tailwindcss-rails", "~> 4.2"
+
+gem 'faker'
+
+gem 'money-rails', '~> 1.12'

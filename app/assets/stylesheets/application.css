@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+
+ .swiper {
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.swiper:hover{
+    .swiper-button-next{
+        display: block!important;
+    }
+    .swiper-button-prev{
+        display: block!important;
+    }
+}
+.swiper-button-prev{
+    display: none!important;
+    background-color: white;
+}
+.swiper-button-next{
+    display: none!important;
+    background-color: white;
+    width: 28px!important;
+    height: 28px!important;
+    border-radius: 50%;
+    background-image: url("/assets/next.svg");
+    border-width: 4px;
+    border-color: white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.swiper-button-prev{
+    display: none!important;
+    background-color: white;
+    width: 28px!important;
+    height: 28px!important;
+    border-radius: 50%;
+    background-image: url("/assets/prev.svg");
+    border-width: 4px;
+    border-color: white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.swiper-button-prev::after{
+    content: ""!important;
+}
+.swiper-button-next::after{
+    content: ""!important;
+}
