@@ -2,6 +2,7 @@ class Property < ApplicationRecord
  
     has_many_attached :images
     has_many :reviews, dependent: :destroy
+    monetize :price_cents, allow_nil: true
     
     validates :name, presence: true
     validates :headline, presence: true
@@ -11,5 +12,9 @@ class Property < ApplicationRecord
     validates :city, presence: true
     validates :country, presence: true
 
-    monetize :price_cents, allow_nil: true
+
+    def update_average_rating
+        average_rating = reviews.average(:final_rating);
+        update_column(:average_final_rating, average_rating)
+    end
 end
