@@ -20,9 +20,6 @@ export default class extends Controller {
       this.element.classList.remove("fill-primary");
       this.element.classList.add("fill-none");
       this.element.dataset.status = "false";
-
     }
-
-    
   }
 }

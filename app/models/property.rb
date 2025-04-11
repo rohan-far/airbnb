@@ -1,7 +1,13 @@
 class Property < ApplicationRecord
  
     has_many_attached :images
+
     has_many :reviews, dependent: :destroy
+    
+    has_many :wishlists, dependent: :destroy
+
+    has_many :wishlisted_users, through: :wishlist, source: :user, dependent: :destroy
+    
     monetize :price_cents, allow_nil: true
     
     validates :name, presence: true
