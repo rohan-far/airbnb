@@ -55,18 +55,25 @@ export default class extends Controller {
     });
   }
 
-  removePropertyFromWishlist(wishlistId){
-    fetch( '/api/wishlists/' + wishlistId, {
-      method: 'DELETE', 
+  removePropertyFromWishlist(wishlistId) {
+    fetch('/api/wishlists/' + wishlistId, {
+      method: 'DELETE',
     })
-    .then(data => {
-      this.element.dataset.wishlistId = "";
-      this.element.classList.remove("fill-primary");
-      this.element.classList.add("fill-none");
-      this.element.dataset.status = "false";
+    .then(response => {
+      if (response.status === 204) {
+        // success, but no content
+        this.element.dataset.wishlistId = "";
+        this.element.classList.remove("fill-primary");
+        this.element.classList.add("fill-none");
+        this.element.dataset.status = "false";
+      } else {
+        return response.json().then(data => {
+          console.error("Unexpected response:", data);
+        });
+      }
     })
     .catch(e => {
       console.log(e);
     });
-  }
+  }  
 }
