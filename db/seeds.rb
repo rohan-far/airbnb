@@ -17,7 +17,12 @@ user = User.create!({
         price: Money.from_amount((50..100).to_a.sample, "USD"),
     })
     property.images.attach(io: File.open("db/images/property_#{i + 1}.png"), filename: property.name)
-    property.images.attach(io: File.open("db/images/property_#{i + 7}.png"), filename: property.name)
+    property.images.attach(io: File.open("db/images/property_7.png"), filename: property.name)
+    property.images.attach(io: File.open("db/images/property_8.png"), filename: property.name)
+    property.images.attach(io: File.open("db/images/property_9.png"), filename: property.name)
+    property.images.attach(io: File.open("db/images/property_10.png"), filename: property.name)
+    property.images.attach(io: File.open("db/images/property_11.png"), filename: property.name)
+    property.images.attach(io: File.open("db/images/property_12.png"), filename: property.name)
 
 
     ((50..100).to_a.sample).times do
