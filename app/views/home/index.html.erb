@@ -51,8 +51,8 @@
             <%= (property.average_final_rating).round(2)%>
           </p>
           </div>
-          <p class="mt-0.5 text-sm text-gray-500">44 kilometres away</p>
-          <p class="mt-0.5 text-sm text-gray-500">6–11 Apr</p>
+          #  TODO: property distance from location
+          <p class="mt-0.5 text-sm text-gray-500"><%= property.available_dates.first %> - <%= property.available_dates.last %></p>
           <p class="mt-0.5 text-sm text-black"><span class="font-bold"><%= humanized_money_with_symbol(property.price) %></span> total</p>
         </div>
       </div>
