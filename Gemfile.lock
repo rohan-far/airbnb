@@ -87,7 +87,7 @@ GEM
       msgpack (~> 1.2)
     builder (3.3.0)
     concurrent-ruby (1.3.5)
-    connection_pool (2.5.0)
+    connection_pool (2.5.2)
     crass (1.0.6)
     date (3.4.1)
     debug (1.10.0)
@@ -103,14 +103,14 @@ GEM
     erubi (1.13.1)
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
-    ffi (1.17.1-aarch64-linux-gnu)
-    ffi (1.17.1-aarch64-linux-musl)
-    ffi (1.17.1-arm-linux-gnu)
-    ffi (1.17.1-arm-linux-musl)
-    ffi (1.17.1-arm64-darwin)
-    ffi (1.17.1-x86_64-darwin)
-    ffi (1.17.1-x86_64-linux-gnu)
-    ffi (1.17.1-x86_64-linux-musl)
+    ffi (1.17.2-aarch64-linux-gnu)
+    ffi (1.17.2-aarch64-linux-musl)
+    ffi (1.17.2-arm-linux-gnu)
+    ffi (1.17.2-arm-linux-musl)
+    ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-darwin)
+    ffi (1.17.2-x86_64-linux-gnu)
+    ffi (1.17.2-x86_64-linux-musl)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.7)
@@ -123,14 +123,14 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.8.0)
-    irb (1.15.1)
+    irb (1.15.2)
       pp (>= 0.6.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    logger (1.6.6)
+    logger (1.7.0)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -156,7 +156,7 @@ GEM
       railties (>= 3.0)
     msgpack (1.8.0)
     mutex_m (0.3.0)
-    net-imap (0.5.6)
+    net-imap (0.5.7)
       date
       net-protocol
     net-pop (0.1.2)
@@ -166,21 +166,21 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.5-aarch64-linux-gnu)
+    nokogiri (1.18.8-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.5-aarch64-linux-musl)
+    nokogiri (1.18.8-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.5-arm-linux-gnu)
+    nokogiri (1.18.8-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.5-arm-linux-musl)
+    nokogiri (1.18.8-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.5-arm64-darwin)
+    nokogiri (1.18.8-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.5-x86_64-darwin)
+    nokogiri (1.18.8-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.5-x86_64-linux-gnu)
+    nokogiri (1.18.8-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.5-x86_64-linux-musl)
+    nokogiri (1.18.8-x86_64-linux-musl)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.9)
@@ -193,7 +193,7 @@ GEM
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.12)
+    rack (3.1.13)
     rack-session (2.1.0)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -231,9 +231,9 @@ GEM
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
     rake (13.2.1)
-    rdoc (6.12.0)
+    rdoc (6.13.1)
       psych (>= 4.0.0)
-    reline (0.6.0)
+    reline (0.6.1)
       io-console (~> 0.5)
     responders (3.1.1)
       actionpack (>= 5.2)
@@ -242,8 +242,9 @@ GEM
       ffi (~> 1.12)
       logger
     securerandom (0.4.1)
-    sprockets (4.2.1)
+    sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
+      logger
       rack (>= 2.2.4, < 4)
     sprockets-rails (3.5.2)
       actionpack (>= 6.1)
@@ -251,17 +252,17 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
-    stringio (3.1.5)
-    tailwindcss-rails (4.2.1)
+    stringio (3.1.7)
+    tailwindcss-rails (4.2.2)
       railties (>= 7.0.0)
       tailwindcss-ruby (~> 4.0)
-    tailwindcss-ruby (4.0.14)
-    tailwindcss-ruby (4.0.14-aarch64-linux-gnu)
-    tailwindcss-ruby (4.0.14-aarch64-linux-musl)
-    tailwindcss-ruby (4.0.14-arm64-darwin)
-    tailwindcss-ruby (4.0.14-x86_64-darwin)
-    tailwindcss-ruby (4.0.14-x86_64-linux-gnu)
-    tailwindcss-ruby (4.0.14-x86_64-linux-musl)
+    tailwindcss-ruby (4.1.4)
+    tailwindcss-ruby (4.1.4-aarch64-linux-gnu)
+    tailwindcss-ruby (4.1.4-aarch64-linux-musl)
+    tailwindcss-ruby (4.1.4-arm64-darwin)
+    tailwindcss-ruby (4.1.4-x86_64-darwin)
+    tailwindcss-ruby (4.1.4-x86_64-linux-gnu)
+    tailwindcss-ruby (4.1.4-x86_64-linux-musl)
     thor (1.3.2)
     timeout (0.4.3)
     turbo-rails (2.0.13)
@@ -283,14 +284,12 @@ GEM
     zeitwerk (2.7.2)
 
 PLATFORMS
-  aarch64-linux
   aarch64-linux-gnu
   aarch64-linux-musl
   arm-linux-gnu
   arm-linux-musl
   arm64-darwin
   x86_64-darwin
-  x86_64-linux
   x86_64-linux-gnu
   x86_64-linux-musl
 
@@ -314,7 +313,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.2.2p53
+   ruby 3.4.2p28
 
 BUNDLED WITH
-   2.6.5
+   2.6.8

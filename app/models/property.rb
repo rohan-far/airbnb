@@ -9,6 +9,8 @@ class Property < ApplicationRecord
 
     has_many :reservations, dependent: :destroy
     has_many :reserved_users, through: :reservations, source: :user, dependent: :destroy
+
+    has_rich_text :description
     
     monetize :price_cents, allow_nil: true
     
@@ -35,12 +37,7 @@ class Property < ApplicationRecord
 
     def available_dates
         next_reservation = reservations.upcoming_reservations.first 
-        current_reservation = reservations.current_reservations.first
-
-        # 1. Next -> nil and current -> nil
-        # 2. 4. Next -> available and current -> nil
-        # 3. Next -> nil and current -> available 
-        # 5. Next -> available and current -> available    
+        current_reservation = reservations.current_reservations.first 
         
         if current_reservation.nil? && next_reservation.nil?
             Date.tomorrow.strftime("%e %b")..(Date.tomorrow + 30.days).strftime("%e %b")
