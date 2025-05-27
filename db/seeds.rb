@@ -38,7 +38,7 @@ user = User.create!({
     property.images.attach(io: File.open("db/images/property_12.png"), filename: property.name)
 
 
-    ((50..100).to_a.sample).times do
+    ((1..20).to_a.sample).times do
         Review.create!({
             content: Faker::Lorem.paragraph(sentence_count: 10),
             communication_rating: (1..5).to_a.sample,
