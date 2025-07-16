@@ -7,10 +7,36 @@ description = <<-DESCRIPTION
  <p>Entire Property is yours!! Wish you fun and happy stay!!</p>
  DESCRIPTION
 
+pictures = []
+20.times do 
+    pictures << URI.parse(Faker::LoremFlickr.image).open
+end
+
 user = User.create!({
     email: 'ro2@gmail.com',
-    password: '123456'
+    password: '123456',
+    name: Faker::Lorem.unique.sentence(word_count: 3),
+    address_1: Faker::Address.street_address,
+    address_2: Faker::Address.street_name,
+    city: Faker::Address.city,
+    state: Faker::Address.state,
+    country: Faker::Address.country
 })
+user.picture.attach(io: pictures[0], filename: user.name)
+
+19.times do |i|
+    random_user = User.create!({
+        email: "test#{i + 2}@gmail.com",
+        password: '123456',
+        name: Faker::Lorem.unique.sentence(word_count: 3),
+        address_1: Faker::Address.street_address,
+        address_2: Faker::Address.street_name,
+        city: Faker::Address.city,
+        state: Faker::Address.state,
+        country: Faker::Address.country
+    })
+    random_user.picture.attach(io: pictures[i + 1], filename: user.name)
+end
 
 
 6.times do |i|
@@ -19,7 +45,7 @@ user = User.create!({
         headline: Faker::Lorem.unique.sentence(word_count: 6),
         description: description,
         address_1: Faker::Address.street_address,
-        address_2: Faker::Address.street_name,
+        
         city: Faker::Address.city,
         state: Faker::Address.state,
         country: Faker::Address.country,
@@ -48,7 +74,7 @@ user = User.create!({
             location_rating: (1..5).to_a.sample,
             value_rating: (1..5).to_a.sample,
             property: property,
-            user: user
+            user: User.all.sample
         })
     end
 end
