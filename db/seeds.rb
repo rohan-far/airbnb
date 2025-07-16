@@ -7,6 +7,18 @@ description = <<-DESCRIPTION
  <p>Entire Property is yours!! Wish you fun and happy stay!!</p>
  DESCRIPTION
 
+aminety1 = Amenity.create!(name: 'kitchen')
+aminety1.icon.attach(io: File.open("app/assets/images/amenity_icons/kitchen.svg"), filename: aminety1.name)
+
+aminety2 = Amenity.create!(name: 'essentials', description: 'Towels, bed sheets, soap and toilet paper')
+aminety2.icon.attach(io: File.open("app/assets/images/amenity_icons/essentials.svg"), filename: aminety2.name)
+
+aminety3 = Amenity.create!(name: 'private_pool')
+aminety3.icon.attach(io: File.open("app/assets/images/amenity_icons/private_pool.svg"), filename: aminety3.name)
+
+aminety4 = Amenity.create!(name: 'wifi')
+aminety4.icon.attach(io: File.open("app/assets/images/amenity_icons/wifi.svg"), filename: aminety4.name)
+
 pictures = []
 20.times do 
     pictures << URI.parse(Faker::LoremFlickr.image).open
